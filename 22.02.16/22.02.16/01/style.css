@@ -1,0 +1,41 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header {
+    width: 500px;
+    height: 200px;
+    background-color: red;
+    border-radius: 10px;
+}
+h3 {
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div{
+    display: flex;
+    justify-content: center;
+}
+nav {
+    width: 130px;
+    height: 10px;
+    background-color: aliceblue;
+    border: 10px;
+    margin-bottom: 10px;
+}
+article {
+    width: 130px;
+    height: 10px;
+    background-color: aliceblue;
+    border: 10px;
+    margin-bottom: 10px;
+}
+footer{
+    width: 130px;
+    height: 10px;
+    background-color : aliceblue;
+    border: 10px;
+}

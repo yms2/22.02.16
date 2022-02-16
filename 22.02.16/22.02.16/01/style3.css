@@ -1,0 +1,68 @@
+.hamburger::before,
+.hamburger::after {
+    content:"";
+}
+
+.hamburger-container {
+    display: inline-block;
+    position: relative;/*포지션 값을 설정후 기준지정*/
+    width: 100px;
+    height: 100px;
+    background: var(--hamburger-bg);
+}
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+    position:absolute;/*포지션값 설정하여 움직일 기준 지정*/
+    width: 100%;
+    height: 10px;
+    transition: 0.5s;
+    background: white;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: "";
+}
+.hamburger {
+    top: 50%;
+}
+.hamburger::before {
+    top: -30px;
+}
+.toggle:checked ~ .hamburger::after{
+    top: 0;
+    transform: rotate(225deg);/*체크했을때 after을 225도 회전시킨다*/
+}
+.toggle:checked ~ .hamburger::before {
+    top: 0;
+    transform: rotate(135deg);/*체크했을때 before을 135도 회전시킨다*/
+}
+.toggle:checked ~ .hamburger {
+    background: var(--hamburger-bg);/*체크시 햄버거 배경색을 컨테이너 배경색과 일치*/ 
+}
+.toggle {
+    opacity: 0;/*체크박스를 투명하게*/
+}
+
+/*전체 스타일링*/
+:root {
+--body-bg:crimson;
+--hamburger-bg:crimson;
+}
+html,
+body {
+    height: 100%;
+}
+body {
+    background: var(--body-bg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.hamburger-title {
+    color: white;
+    font-size: 18px;
+    padding-bottom: 10px;
+}
